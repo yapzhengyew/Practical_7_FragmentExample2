@@ -1,0 +1,4 @@
+#Wed Jul 15 01:12:03 SGT 2020
+base.0=D\:\\Program Files (x86)\\AndroidStudioProjects\\DroidCafeOptions\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
