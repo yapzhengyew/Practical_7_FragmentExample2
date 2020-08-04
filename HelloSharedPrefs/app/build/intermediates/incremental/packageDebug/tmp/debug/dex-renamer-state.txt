@@ -1,0 +1,4 @@
+#Tue Aug 04 15:13:57 SGT 2020
+base.0=D\:\\Program Files (x86)\\AndroidStudioProjects\\HelloSharedPrefs\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
