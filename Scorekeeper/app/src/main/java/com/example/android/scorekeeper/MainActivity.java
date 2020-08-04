@@ -195,13 +195,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void reset(View view) {
         // Reset count
-        mCount = 0;
-        mShowCountTextView.setText(String.format("%s", mCount));
+        mScore1 = 0;
+        mScoreText1.setText(String.format("%s", mScore1));
+        mScore2 = 0;
+        mScoreText2.setText(String.format("%s", mScore2));
 
-        // Reset color
-        mColor = ContextCompat.getColor(this,
-                R.color.default_background);
-        mShowCountTextView.setBackgroundColor(mColor);
+        // Clear preferences
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.clear();
+        preferencesEditor.apply();
     }
 
 }
