@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603281031213",
+    "firebase_url": "https://nbshop-28a98.firebaseio.com",
+    "project_id": "nbshop-28a98",
+    "storage_bucket": "nbshop-28a98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603281031213:android:9f6c5dc50b597db66ab8a4",
+        "android_client_info": {
+          "package_name": "com.example.nbshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603281031213-mks6cg9go754stlgdkj5g8321dbhcak3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP1KFvioc69H7RneeJ6K-YdpQQXD9mfW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603281031213-mks6cg9go754stlgdkj5g8321dbhcak3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

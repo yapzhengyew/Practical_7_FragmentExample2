@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NBShop</string>
+    <string name="enter_phone_number_hint">Phone Number</string>
+    <string name="enter_password_hint">Password</string>
+    <string name="login_text">LOGIN</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="forgot_password_text">Forgot password</string>
+    <string name="enter_email_hint">Email Address</string>
+    <string name="enter_confirmed_password_hint">Confirmed Password</string>
+    <string name="next_text">NEXT</string>
+    <string name="enter_username_hint">Username</string>
+    <string name="enter_gender_hint">Gender</string>
+    <string name="enter_birth_date_hint">Birthdate</string>
+    <string name="enter_address_1_hint">Address 1</string>
+    <string name="enter_address_2_hint">Address 2</string>
+    <string name="done_text">DONE</string>
+    <string name="about_us_text">ABOUT US</string>
+    <string name="about_us_content_1">\"Niubi stuff for niubi people\"</string>
+    <string name="about_us_content_2">- Jack Ma 2020</string>
+    <string name="return_text">RETURN</string>
+    <string name="contact_us_text">CONTACT US</string>
+    <string name="about_us_telephone">Tel Num: 0102055464</string>
+    <string name="contact_us_email">Email: niubilityshop@gmail.com</string>
+    <string name="purchase_history_text">Purchase history</string>
+    <string name="profile_setting_text">Profile Setting</string>
+    <string name="email_hint">Email</string>
+</resources>
