@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/theArtMuseum"
+        android:layout_width="50dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="THE\nART\nMUSEUM"
+        android:textColor="#000000"
+        android:textFontWeight="400"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="415dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+    <TextView
+        android:id="@+id/exhibition"
+        android:layout_width="72dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="EXHIBITION"
+        android:textColor="#979797"
+        android:textFontWeight="400"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/mastersOldAndNew"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/montserrat"
+        android:text="MASTERS\nOLD AND \nNEW"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textFontWeight="400"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exhibition" />
+
+    <TextView
+        android:id="@+id/floor"
+        android:layout_width="48dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/montserrat"
+        android:text="FLOOR 5"
+        android:textColor="#979797"
+        android:textFontWeight="400"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <Button
+        android:id="@+id/planButton"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="39dp"
+        android:background="#FF473A"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserrat"
+        android:shadowColor="#000000"
+        android:text="Plan Your Visit"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floor" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="147dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/montserrat"
+        android:text="151 3rd St \nSan Francisco, CA 94103"
+        android:textColor="#FF473A"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planButton" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Open today\n10:00am-5:30pm"
+        android:textColor="#FF473A"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="253dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/montserrat"
+        android:text="APRIL 15 - SEPTEMBER 20"
+        android:textColor="#FF473A"
+        android:textFontWeight="400"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mastersOldAndNew" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:srcCompat="@drawable/clock_icon" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/location_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

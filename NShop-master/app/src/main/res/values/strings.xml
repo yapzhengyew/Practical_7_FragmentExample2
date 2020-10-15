@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NShopMainMenu</string>
+    <string name="black_mask">Black Mask</string>
+    <string name="blue_mask">Blue Mask</string>
+    <string name="purple_mask">Purple Mask</string>
+    <string name="product">PRODUCT</string>
+    <string name="description_label">Description: </string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="img01">01</string>
+    <string name="img02">02</string>
+    <string name="img03">03</string>
+    <string name="img04">04</string>
+    <string name="img05">05</string>
+    <string name="black_mask_desc">A mask made of black cloth.</string>
+    <string name="blue_mask_desc">A mask made of blue cloth.</string>
+    <string name="purple_mask_desc">A mask made of purple cloth.</string>
+    <string name="price01">RM15.00 per pcs</string>
+    <string name="todo">TODO</string>
+    <string name="main_menu_message">You\'re at the Main Menu already!</string>
+    <string name="profile_page_message">You\'re at the Profile Page already!</string>
+    <string name="your_profile">YOUR PROFILE</string>
+    <string name="username">User Name</string>
+    <string name="email">User Email Address</string>
+    <string name="purchase_history_btn">Purchase History</string>
+    <string name="contact_us_btn">Contact Us</string>
+    <string name="about_us_btn">About Us</string>
+</resources>
