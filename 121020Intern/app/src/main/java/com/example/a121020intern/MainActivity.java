@@ -55,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<Example> call, Response<Example> response) {
                 Example data = response.body();
 
+                //SET ADPATER RECYLCER VEIW
+
                 floor.setText(data.getData().getFloor());
+
+                //adapter = new
 
                 //image
                 String path = data.getData().getImageUrl();
@@ -78,14 +82,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button_view = findViewById(R.id.planButton);
-        button_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ViewNoteActivity.class);
-                startActivity(intent);
-            }
-        });
+//        button_view = findViewById(R.id.planButton);
+//        button_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, ViewNoteActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 

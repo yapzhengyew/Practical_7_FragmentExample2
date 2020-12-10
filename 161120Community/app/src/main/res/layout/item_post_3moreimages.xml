@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topbar_3_more_images"
+        layout="@layout/item_topbar" />
+
+    <RelativeLayout
+        android:id="@+id/content_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_3_more_images"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content_first_thumbnail_3_more_images"
+            android:layout_width="220dp"
+            android:layout_height="195dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content_second_thumbnail_3_more_images"
+            android:layout_width="162dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content_third_thumbnail_3_more_images"
+            android:layout_width="162dp"
+            android:layout_height="97dp"
+            android:layout_below="@id/content_second_thumbnail_3_more_images"
+            android:layout_alignParentEnd="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content_more_images_shadow"
+            android:layout_width="162dp"
+            android:layout_height="97dp"
+            android:layout_below="@id/content_second_thumbnail_3_more_images"
+            android:layout_alignParentEnd="true"
+            android:background="#990D4450" />
+
+        <TextView
+            android:id="@+id/number_more_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_second_thumbnail_3_more_images"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="+3"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="600"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/content_text_3_more_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_first_thumbnail_3_more_images"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:text="To enjoy the glow of good health, you must exercise."
+            android:textColor="#666666"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/item_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_bar" />
+
+
+</RelativeLayout>

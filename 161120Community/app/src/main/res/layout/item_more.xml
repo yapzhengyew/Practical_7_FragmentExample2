@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+
+    <ImageView
+        android:id="@+id/icon_item_more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/icon_update_profile" />
+
+    <TextView
+        android:id="@+id/item_more_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/icon_item_more"
+        android:fontFamily="@font/montserrat"
+        android:text="Update Profile"
+        android:textColor="#262626"
+        android:textFontWeight="600" />
+
+    <ImageView
+        android:id="@+id/item_button_more"
+        android:layout_width="6dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/item_more_button" />
+
+    <View
+        android:id="@+id/short_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/icon_item_more"
+        android:layout_marginHorizontal="15dp"
+        android:background="#E5E5E5" />
+
+</RelativeLayout>

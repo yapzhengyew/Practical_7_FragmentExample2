@@ -1,24 +1,35 @@
 package com.example.a141020note;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.MenuInflater;
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -32,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DATA_ID = "extra_data_id";
 
     private NoteViewModel noteViewModel;
+
+    private NoteListAdapter adapter;
+
+    private SearchView searchView;
+
+
+    private ColorDrawable swipeBackground = new ColorDrawable(Color.parseColor("#FF5656"));
+    private Drawable deleteIcon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Recycler View
+        adapter = new NoteListAdapter(this);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        final NoteListAdapter adapter = new NoteListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -67,7 +87,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         //Swipe to delete
+        deleteIcon = ContextCompat.getDrawable(this,R.drawable.ic_delete);
+
         ItemTouchHelper helper = new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(0,
                         ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT){
@@ -79,17 +102,67 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction){
-                        int position = viewHolder.getAdapterPosition();
-                        Note myNote = adapter.getNoteAtPosition(position);
-                        Toast.makeText(MainActivity.this,"Deleting "+
-                                myNote.getNote(), Toast.LENGTH_LONG).show();
+                    public void onSwiped(final RecyclerView.ViewHolder viewHolder, int direction){
 
-                        noteViewModel.deleteNote(myNote);
+                        new AlertDialog.Builder(viewHolder.itemView.getContext())
+                                .setMessage("Are you sure to delete?")
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                                    public void onClick(DialogInterface dialog, int id){
+
+                                        int position = viewHolder.getAdapterPosition();
+                                        Note myNote = adapter.getNoteAtPosition(position);
+                                        Toast.makeText(MainActivity.this,"Deleting "+
+                                                myNote.getNote(), Toast.LENGTH_LONG).show();
+
+                                        noteViewModel.deleteNote(myNote);
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        //cancel to delete
+                                        adapter.notifyItemChanged(viewHolder.getAdapterPosition());
+                                    }
+                                })
+                                .create()
+                                .show();
+
 
                     }
-                }
-        );
+
+                    @Override
+                    public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+
+                        View itemView = viewHolder.itemView;
+
+                        int iconMargin = (itemView.getHeight()-deleteIcon.getIntrinsicHeight()) / 2 - 30;
+
+                        if (dX > 0){
+                            swipeBackground.setBounds(itemView.getLeft(), itemView.getTop()+30, (int) dX, itemView.getBottom());
+                            deleteIcon.setBounds(itemView.getLeft() + iconMargin -10,itemView.getTop()+iconMargin+30,
+                                    itemView.getLeft()+iconMargin+deleteIcon.getIntrinsicWidth()+10,itemView.getBottom()-iconMargin);
+                        } else {
+                            swipeBackground.setBounds(itemView.getRight() + (int) dX, itemView.getTop()+30, itemView.getRight(), itemView.getBottom());
+                            deleteIcon.setBounds(itemView.getRight() - iconMargin - deleteIcon.getIntrinsicWidth() -10 ,itemView.getTop()+iconMargin+30,
+                                    itemView.getRight()-iconMargin+10,itemView.getBottom()-iconMargin);
+
+                        }
+
+                        swipeBackground.draw(c);
+
+                        c.save();
+
+                        if (dX > 0){
+                            c.clipRect(itemView.getLeft(), itemView.getTop()+30, (int) dX, itemView.getBottom());
+                        } else {
+                            c.clipRect(itemView.getRight() + (int) dX, itemView.getTop()+30, itemView.getRight(), itemView.getBottom());
+                        }
+                        deleteIcon.draw(c);
+                        c.restore();
+
+                        super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+                    }
+                });
 
         helper.attachToRecyclerView(recyclerView);
 
@@ -103,12 +176,55 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
+        //Search
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu,menu);
+
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(final String s) {
+                noteViewModel.getSearchNotes(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(final String s) {
+
+                if(s.length() <= 0){
+                    noteViewModel = ViewModelProviders.of(MainActivity.this).get(NoteViewModel.class);
+
+                    noteViewModel.getAllNotes().observe(MainActivity.this, new Observer<List<Note>>() {
+                        @Override
+                        public void onChanged(@Nullable List<Note> notes) {
+                            adapter.setNotes(notes);
+                        }
+                    });
+                } else {
+                    noteViewModel = ViewModelProviders.of(MainActivity.this).get(NoteViewModel.class);
+
+                    noteViewModel.getSearchNotes(s).observe(MainActivity.this, new Observer<List<Note>>() {
+                        @Override
+                        public void onChanged(@Nullable List<Note> notes) {
+                            adapter.setNotes(notes);
+                        }
+                    });
+                }
+
+                return false;
+            }
+
+        });
+        return super.onCreateOptionsMenu(menu);
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -10,9 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteViewHolder> {
+public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteViewHolder>{ //implements Filterable {
     private final LayoutInflater inflater;
     private List<Note> notes;
+
 
     private static ClickListener clickListener;
 

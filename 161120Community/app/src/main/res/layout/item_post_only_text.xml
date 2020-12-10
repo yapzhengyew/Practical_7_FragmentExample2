@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/topbar_only_text"
+        layout="@layout/item_topbar" />
+
+    <TextView
+        android:id="@+id/content_only_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_only_text"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Don’t wait until you’ve reached your goal to be proud of yourself. Be proud of every step you take toward reaching that goal."
+        android:textColor="#666666"
+        android:textFontWeight="400"
+        android:textSize="12sp" />
+
+    <include
+        layout="@layout/item_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_only_text" />
+
+
+</RelativeLayout>
