@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "341024342567",
+    "firebase_url": "https://nshop-dd3d6.firebaseio.com",
+    "project_id": "nshop-dd3d6",
+    "storage_bucket": "nshop-dd3d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341024342567:android:4129e0ad6e0fd49e328402",
+        "android_client_info": {
+          "package_name": "com.example.nshopmainmenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341024342567-8f92ivossf11mhdqd1jg3qt5e6rh2ng5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nshopmainmenu",
+            "certificate_hash": "62c72d7c4c6458cf3ee041fa2784b46b5eb1a2cf"
+          }
+        },
+        {
+          "client_id": "341024342567-f1mgn1opic85h4l4ds96h11h3v6b6d1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAmLDpCqciDDidgLHLt9Z0igjFIYCGJwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341024342567-f1mgn1opic85h4l4ds96h11h3v6b6d1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

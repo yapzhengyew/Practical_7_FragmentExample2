@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">NShopMainMenu</string>
+    <string name="black_mask">Black Mask</string>
+    <string name="blue_mask">Blue Mask</string>
+    <string name="purple_mask">Purple Mask</string>
+    <string name="product">PRODUCT</string>
+    <string name="description_label">Description: </string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="img01">01</string>
+    <string name="img02">02</string>
+    <string name="img03">03</string>
+    <string name="img04">04</string>
+    <string name="img05">05</string>
+    <string name="black_mask_desc">A mask made of black cloth.</string>
+    <string name="blue_mask_desc">A mask made of blue cloth.</string>
+    <string name="purple_mask_desc">A mask made of purple cloth.</string>
+    <string name="price01">RM15.00 per pcs</string>
+    <string name="price02">RM2.00 per pcs</string>
+    <string name="price03">RM13.00 per pcs</string>
+    <string name="todo">TODO</string>
+    <string name="main_menu_message">You\'re at the Main Menu already!</string>
+    <string name="profile_page_message">You\'re at the Profile Page already!</string>
+    <string name="your_profile">YOUR PROFILE</string>
+    <string name="username">User Name</string>
+    <string name="email">User Email Address</string>
+    <string name="purchase_history_btn">Purchase History</string>
+    <string name="contact_us_btn">Contact Us</string>
+    <string name="about_us_btn">About Us</string>
+    <string name="profile_page_info">Swipe left to see other options: </string>
+    <string name="edit_profile">EDIT YOUR PROFILE</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthdate_pick">Pick Your Birthdate</string>
+    <string name="postal">Postal</string>
+    <string name="address">Address</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="saved">Profile Updated!</string>
+    <string name="pick_gender">Pick A Gender :</string>
+    <string name="your_username">Your Username :</string>
+    <string name="your_email">Your Email Address :</string>
+    <string name="your_postal_code">Your Postal Code :</string>
+    <string name="your_address">Your Address :</string>
+    <string name="profile_pic_update">Profile Picture Updated!</string>
+    <string name="quantity">Qty</string>
+    <string name="one">1</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="contact_us_details">
+        \n\nKong Hai Adam \n - kongha-wm19@student.tarc.edu.my
+        \n\nHow Yeow Liang \n - howyl-wm19@student.tarc.edu.my
+        \n\nChan Kit Yuen \n - chanky-wh16@student.tarc.edu.my
+        \n\nYap Zheng Yew \n - yapzy-wm19@student.tarc.edu.my</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_details">NSHOP is an online shopping platform made by a small team in 2020 that allow customers to buy things such as mask and other stuffs</string>
+    <string name="confirm_message">Are you sure that the products below are correct?</string>
+    <string name="rm">RM</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="added_order">Order Added!</string>
+    <string name="zero_order">Cannot add zero items into the cart!</string>
+    <string name="placeholder">Place Holder.</string>
+    <string name="product_name">Product Name</string>
+    <string name="qty">Qty</string>
+    <string name="price_rm">Price(RM)</string>
+    <string name="dash">-</string>
+    <string name="check_out">Check Out</string>
+    <string name="total_price_label">Total Price: RM</string>
+    <string name="total_price_label_no_unit">Total Price: </string>
+    <string name="pn" type="id">productName</string>
+    <string name="pd" type="id">productPrice</string>
+    <string name="pq" type="id">productQty</string>
+    <string name="return_text">Return</string>
+    <string name="payment_made">Payment Made!</string>
+    <string name="delivery_address">Delivery Address:</string>
+    <string name="order_id">Order ID:</string>
+    <string name="bank_account_number_label">Bank Account Number:</string>
+    <string name="bank_account_holder_label">Bank Account Holder:</string>
+    <string name="make_sure_the_below_information_are_correct">Make sure the below information are correct.</string>
+    <string name="enter_phone_number_hint">Phone Number</string>
+    <string name="enter_password_hint">Password</string>
+    <string name="login_text">LOGIN</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="forgot_password_text">Forgot password</string>
+    <string name="enter_email_hint">Email Address</string>
+    <string name="enter_confirmed_password_hint">Confirmed Password</string>
+    <string name="next_text">NEXT</string>
+    <string name="enter_username_hint">Username</string>
+    <string name="enter_gender_hint">Gender</string>
+    <string name="enter_birth_date_hint">Birthdate</string>
+    <string name="enter_address_1_hint">Address 1</string>
+    <string name="enter_address_2_hint">Address 2</string>
+    <string name="done_text">DONE</string>
+    <string name="verification_email">We have sent an email to your email address. Please go to your email address and click on the link to change your password.</string>
+    <string name="bank_account_number">Bank Account Number</string>
+    <string name="bank_account_holder">Bank Account Holder Name</string>
+    <string name="logout">logout</string>
+</resources>

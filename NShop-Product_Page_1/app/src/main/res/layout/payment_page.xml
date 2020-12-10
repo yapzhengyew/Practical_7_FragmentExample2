@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/payment_page_design"
+    tools:context=".PaymentPage">
+
+    <TextView
+        android:id="@+id/finalPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="@string/total_price_label_no_unit"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalFrame"
+        app:layout_constraintEnd_toEndOf="@+id/totalFrame"
+        app:layout_constraintStart_toStartOf="@+id/totalFrame"
+        app:layout_constraintTop_toTopOf="@+id/totalFrame" />
+
+    <ImageView
+        android:id="@+id/totalFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bankFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_marginBottom="105dp"
+        android:background="@drawable/frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalFrame" />
+
+    <TextView
+        android:id="@+id/finalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/placeholder"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalFrame"
+        app:layout_constraintEnd_toEndOf="@+id/totalFrame"
+        app:layout_constraintStart_toStartOf="@+id/totalFrame"
+        app:layout_constraintTop_toBottomOf="@+id/finalPriceLabel" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rm"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalFrame"
+        app:layout_constraintEnd_toStartOf="@+id/finalPrice"
+        app:layout_constraintTop_toBottomOf="@+id/finalPriceLabel" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:text="@string/make_sure_the_below_information_are_correct"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="@+id/bankFrame"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/bankFrame"
+        app:layout_constraintTop_toTopOf="@+id/bankFrame"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <TextView
+        android:id="@+id/bankAccHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:text="@string/bank_account_holder_label"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="@+id/bankFrame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <TextView
+        android:id="@+id/holderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="210dp"
+        android:text="@string/placeholder"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccHolder" />
+
+    <TextView
+        android:id="@+id/bankAccNumLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="175dp"
+        android:text="@string/bank_account_number_label"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/holderName" />
+
+    <TextView
+        android:id="@+id/accNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="130dp"
+        android:text="@string/placeholder"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccNumLabel" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:background="#000000"
+        android:onClick="onConfirmClick"
+        android:text="@string/confirm"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bankFrame"
+        app:layout_constraintEnd_toEndOf="@+id/bankFrame"
+        app:layout_constraintStart_toStartOf="@+id/bankFrame" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:background="#000000"
+        android:text="@string/return_text"
+        android:onClick="onReturnClick"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bankFrame"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/bankFrame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
