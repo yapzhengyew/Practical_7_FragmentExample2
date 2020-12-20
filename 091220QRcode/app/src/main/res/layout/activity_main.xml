@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
+        android:onClick="goToScanActivity"
         android:text="Scan Page" />
 
     <Button
@@ -22,6 +23,7 @@
         android:layout_below="@id/button_scan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:onClick="goToGenerateActivity"
         android:text="Generate Page" />
 
 </RelativeLayout>

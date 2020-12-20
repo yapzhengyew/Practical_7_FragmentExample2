@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScanActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_scan"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#1BA9B2"
+        android:text="Scan"
+        android:textAllCaps="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_scan"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:textColor="#666666"
+            android:textFontWeight="500"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/value_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title"
+            android:layout_marginTop="8dp"
+            android:text="Title"
+            android:textColor="#262626"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/value_title"
+            android:layout_marginTop="20dp"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_1"
+            android:layout_marginTop="20dp"
+            android:text="CONTENT"
+            android:textColor="#666666"
+            android:textFontWeight="500"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/value_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_content"
+            android:layout_marginTop="8dp"
+            android:text="Content"
+            android:textColor="#262626"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/value_content"
+            android:layout_marginTop="20dp"
+            android:background="#E5E5E5" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
